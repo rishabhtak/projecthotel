@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+ <style>
+ 
+body {
+	background-image: url("background.jpg");
+	background-size:cover;
+	
+
+}
+
+ 
+  .book-container {
+
+      background-color:#1E73BE;
+      max-width:95%;
+      height:auto;
+      margin:auto;
+     
+  }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 120px;
+  
+}
+
+ .space {
+	margin-left:15px;
+	padding-left:10px;
+	}
+
+	.featurestext {
+
+	font-weight:bold;
+	text-align:center;
+	margin-left:15px;
+	padding-top:15px;
+	}
+
+.navbar-nav > li{
+  margin-left:30px;
+ 
+}
+
+#link:hover {
+
+	background-color:lightblue;
+}	
+   .namebox {
+      background-color:#1E73BE;
+      max-width:90%;
+      height:150px;
+      margin:auto;
+}
+
+   .clmn {
+	column-count:3;
+	max-width:90%;
+      	height:auto;
+      	margin:auto;
+	
+ } 
+
+    .zoom {
+	max-width:60%;
+        display:block;
+        margin:auto;
+}
+
+   #cardblock {
+	display:flex;
+	flex-wrap:wrap;
+	max-width:100%;
+	
+}
+
+.col {
+  flex: 1;
+  background-color:#f7f7f7;
+  margin:15px;
+ 
+}
+
+	.linkcontainer {
+
+	//background-color:#5D6770;
+	max-width:100%;
+	height:250px;
+	padding:20px;
+	
+}
+
+     .extralinks {
+	color:black;
+	
+	
+}
+
+	.extralinks:hover {
+		color:lightblue;
+		text-decoration:none;
+}
+
+
+.bttn {
+  background-color: #549DE2;
+  border: none;
+  color: white;
+  padding: 8px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  cursor: pointer;
+  border-radius:10px;
+  
+}
+
+.bttn:hover {
+text-decoration: none;
+
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 100px;
+  cursor: pointer;
+  background: transparent;
+  top: 50%;
+  margin-top: -45px;
+  font-size: 0;
+  border: none;
+  z-index: 2;
+}
+.slick-prev:before,
+.slick-next:before,
+.slick-prev:after,
+.slick-next:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 50px;
+  top: 50%;
+  left: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.slick-prev:before,
+.slick-next:before {
+  margin-top: -22px;
+}
+.slick-prev:after,
+.slick-next:after {
+  margin-top: 22px;
+ // margin-top: 2.2rem;
+}
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  margin-top: -18px;
+ // margin-top: -1.8rem;
+}
+.slick-prev:hover:after,
+.slick-next:hover:after {
+  margin-top: 18px;
+ // margin-top: 1.8rem;
+}
+.slick-prev {
+  left: -7px;
+ // left: -0.7rem;
+}
+.slick-prev:before {
+  -webkit-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.slick-prev:after {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.slick-prev:hover:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.slick-prev:hover:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.slick-next {
+  right: -7px;
+ // right: -0.7rem;
+}
+.slick-next:before {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.slick-next:after {
+  -webkit-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.slick-next:hover:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.slick-next:hover:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ct-slick-arrows--type2 .slick-prev,
+.ct-slick-arrows--type2 .slick-next {
+  opacity: 0.85;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+.ct-slick-arrows--type2 .slick-prev:before,
+.ct-slick-arrows--type2 .slick-next:before,
+.ct-slick-arrows--type2 .slick-prev:after,
+.ct-slick-arrows--type2 .slick-next:after {
+  background-color: #fff;
+  height: 15px;
+ // height: 1.5rem;
+  width: 70px;
+ // width: 7rem;
+}
+.ct-slick-arrows--type2 .slick-prev:before,
+.ct-slick-arrows--type2 .slick-next:before {
+  margin-top: -20px;
+ // margin-top: -2rem;
+}
+.ct-slick-arrows--type2 .slick-prev:after,
+.ct-slick-arrows--type2 .slick-next:after {
+  margin-top: 20px;
+ // margin-top: 2rem;
+}
+.ct-slick-arrows--type2 .slick-prev:hover:before,
+.ct-slick-arrows--type2 .slick-next:hover:before {
+  margin-top: -20px;
+//  margin-top: -2rem;
+}
+.ct-slick-arrows--type2 .slick-prev:hover:after,
+.ct-slick-arrows--type2 .slick-next:hover:after {
+  margin-top: 20px;
+ // margin-top: 2rem;
+}
+.ct-slick-arrows--type2 .slick-prev:hover:active,
+.ct-slick-arrows--type2 .slick-next:hover:active {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+.ct-slick-arrows--type2 .slick-prev {
+  left: 10px;
+ // left: 1rem;
+}
+.ct-slick-arrows--type2 .slick-prev:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ct-slick-arrows--type2 .slick-prev:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ct-slick-arrows--type2 .slick-prev:hover:before {
+  margin-top: -27px;
+ // margin-top: -2.7rem;
+  -webkit-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.ct-slick-arrows--type2 .slick-prev:hover:after {
+  margin-top: 27px;
+ // margin-top: 2.7rem;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.ct-slick-arrows--type2 .slick-next {
+  right: 10px;
+ // right: 1rem;
+}
+.ct-slick-arrows--type2 .slick-next:before,
+.ct-slick-arrows--type2 .slick-next:after {
+  left: auto;
+  right: 0;
+}
+.ct-slick-arrows--type2 .slick-next:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ct-slick-arrows--type2 .slick-next:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ct-slick-arrows--type2 .slick-next:hover:before {
+  margin-top: -27px;
+ // margin-top: -2.7rem;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.ct-slick-arrows--type2 .slick-next:hover:after {
+  margin-top: 27px;
+ // margin-top: 2.7rem;
+  -webkit-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+#home.ct-header.ct-header--slider {
+  background-size: cover;
+}
+.ct-header .ct-slick {
+  margin-bottom: 0;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.ct-u-display-tablex {
+  display: table;
+  width: 100%;
+  height: 600px;
+}
+.ct-u-display-tablex > .inner {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+.ct-header h1.big {
+ // font-size: 6.7rem;
+  line-height: 1;
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  padding-top: 50px;
+}
+.ct-header p {
+ // font-size: 2.3rem;
+    font-size: 20px;
+  line-height: 1.1;
+  margin: 30px 0 40px;
+  color:#fff;
+}
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 30px;
+ // padding: 0.9rem 1.6rem;
+  color: #fff;
+
+  border-radius: 10px;
+  border: none;
+  font-size: 22px;
+  //font-size: 1.3rem;
+  
+}
+* { 
+  outline: none !important;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: #fff;
+}
+.btn-transparent {
+  background-color: transparent;
+  border: 3px solid #fff;
+}
+.ct-slick .slick-track,
+.ct-slick .slick-list,
+.ct-slick .item,
+.ct-slick .slick-item {
+  min-height: inherit;
+}
+.ct-slick .item {
+  background-size: cover;
+}
+.slick-list {
+  height: 600px;
+}
+
+/* Transitions */
+.activate {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=1 * 100);
+  filter: alpha(opacity=1 * 100);
+}
+.animated {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0 * 100);
+  filter: alpha(opacity=0 * 100);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+
+</style>
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+<div class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+ <!--Logo-->
+<a class="navbar-brand" href="#">
+<img src=".\Logo\logo.png ">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+<ul class="navbar-nav" style="margin:20px">
+ <!--Dropdown -->
+<li class="nav-item dropdown">
+<a href="#" id="navbardrop" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">
+OUR PROPERTIES
+</a>
+<div class="dropdown-menu bg-dark">
+<a class="dropdown-item text-white" href="#" id="link">luv d bangkok slam</a>
+<a class="dropdown-item text-white" href="#" id="link">luv d phuket potong</a>
+<a class="dropdown-item text-white" href="#" id="link">luv d phuket potong</a>
+</div>
+</li>
+ <!--Links -->
+<li class="nav-item"><a href="#features" class="nav-link text-white">FEATURES</a></li>
+<li class="nav-item"><a href="#rooms" class="nav-link text-white">ROOMS</a></li>
+<li class="nav-item"><a href="#facilities" class="nav-link text-white">FACILITIES</a></li>
+<li class="nav-item"><a href="#reviews" class="nav-link text-white">REVIEWS</a></li>
+<li class="nav-item"><a href="#" class="nav-link text-white">LOCATION</a></li>
+ <li class="nav-item"><a class="bttn" href="#book">BOOK NOW</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<br><br>
+
+
+<div class="ct-header ct-header--slider ct-slick-custom-dots" id="home">
+  <div class="ct-slick-homepage" data-arrows="true" data-autoplay="true">
+    <div class="ct-header tablex item" data-background="./Main/pic1.jpg" style="width:100%;height:auto">
+      <div class="ct-u-display-tablex">
+        <div class="inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-6 slider-inner">
+                
+                <p class="animated">Lub d Bangkok Siam Next to skytrain, connect to big malls</p>
+                <a class="btn btn-transparent btn-lg text-uppercase animated" href="">More Info </a>
+		<div id="book"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ct-header tablex item" data-background="./Main/pic2.jpg" style="width:100%;height:auto">
+      <div class="ct-u-display-tablex">
+        <div class="inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-6 slider-inner">
+                
+                <p class="animated">Lub d Phuket Patong 3 min walk to the beach</p>
+                <a class="btn btn-transparent btn-lg text-uppercase animated" href="">More Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ct-header tablex item" data-background="./Main/pic3.jpg" style="width:100%;height:auto">
+      <div class="ct-u-display-tablex">
+        <div class="inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-6 slider-inner">
+                 
+                <p class="animated">Lub d Koh Samui Chaweng Beach Beachfront social sweet spot on Thailand's beautiful Koh Samui</p>
+                <a class="btn btn-transparent btn-lg text-uppercase animated" href="">More Info</a>
+              </div>
+		
+            </div>
+          </div>
+        </div>
+	
+      </div>
+    </div>
+  </div>
+
+  <!-- .ct-slick-homepage -->
+</div>
+<!-- .ct-header -->
+
+
+<!-- Booking box  -->
+<br>
+<div class="book-container">
+<form class="form-inline">
+<div style="margin:50px 150px">
+<div class="form-group">
+ <label class="form-label mb-2 mr-sm-2"><span style="color:white">Where to stay</span></label>
+  <select class="form-control mb-2 mr-sm-2">
+    <option>Please choose</option>
+    <option>Bangkok Sialm</option>
+    <option>Bangkok Siom</option>
+    <option>Bangkok Makati</option>
+  </select>
+
+
+
+ <label class="form-label mb-2 mr-sm-2"><span style="color:white">Check-In</span></label>
+  <input type="date" class="form-control mb-2 mr-sm-2" id="checkin">  
+
+
+
+ <label class="form-label mb-2 mr-sm-2"><span style="color:white">Check-Out</span></label>
+ <input type="date" class="form-control mb-2 mr-sm-2"  id="checkout">
+
+ <button class="bttn mb-2" >BOOK NOW</button> 
+
+</div>
+</div>
+</form>
+</div>
+
+<div id="features"></div>
+
+<br><br>
+
+<!-- Features -->
+<div class="namebox">
+<h2 style="color:white;text-align:center;padding-top:50px">Features</h2>
+
+</div>
+<br>
+<div class="row"> 
+
+<figure>
+  <img src="./Features/bar.png" alt="Bar" class="space">
+  <figcaption class="featurestext">Bar</figcaption>
+</figure>
+
+<figure>
+  <img src="./Features/bf.png" alt="Breakfast" class="space">
+  <figcaption class="featurestext">Breakfast</figcaption>
+</figure>
+
+<figure>
+  <img src="./Features/desk.png" alt="FrontDesk" class="space">
+  <figcaption class="featurestext">FrontDesk</figcaption>
+</figure>
+
+<figure>
+  <img src="./Features/laundry.png" alt="Laundry" class="space">
+  <figcaption class="featurestext">Laundry</figcaption>
+</figure>
+
+<figure>
+  <img src="./Features/Luggage.png" alt="Luggage" class="space">
+  <figcaption class="featurestext">Luggage</figcaption>
+</figure>
+
+<figure>
+  <img src="./Features/wifi.png" alt="WiFi" class="space">
+  <figcaption class="featurestext">WiFi</figcaption>
+</figure>
+</div>
+
+
+<br><br>
+
+<!-- Pictures -->
+<div class="namebox" id="rooms">
+<h2 style="color:white;text-align:center;padding-top:20px">Hotel Rooms</h2>
+<p style="color:white;text-align:center">More than a place to sleep</p>
+</div>
+
+<br><br>
+<!-- Tourist Pictures -->
+<div class="zoom">
+
+<div id="tourist" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./Thumbnails/pic1.jpg" alt="Tourist" width="1000" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="./Thumbnails/pic2.jpg" alt="Tourist" width="1000" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="./Thumbnails/pic3.jpg" alt="Tourist" width="1000" height="500">
+    </div>
+<div class="carousel-item">
+      <img src="./Thumbnails/pic4.jpg" alt="Tourist" width="1000" height="500">
+    </div>
+<div class="carousel-item">
+      <img src="./Thumbnails/pic5.jpg" alt="Tourist" width="1000" height="500">
+    </div>
+<div class="carousel-item">
+      <img src="./Thumbnails/pic6.jpg" alt="Tourist" width="1000" height="500">
+    </div>
+<div class="carousel-item">
+      <img src="./Thumbnails/pic7.jpg" alt="Tourist" width="1000" height="500">
+    </div>
+    
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#tourist" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#tourist" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+ <div id="facilities">
+<br><br>
+
+<!-- Facilities -->
+
+<div class="namebox">
+<h2 style="color:white;text-align:center;padding-top:20px">Our Facilities</h2>
+<p style="color:white;text-align:center">Stay Connected while you travel - Leave the Cleaning to Us - Your Security is our Priority - Make Yourself at Home</p>
+</div>
+<br><br>
+<div class="clmn">
+<ul style="font-family:arial">
+<li><span style="color:#FF7417">Free</span> Wi-fi</li>
+<li>24-hour front desk</li>
+<li>All-day breakfast and snacks</li>
+<li>Coffee bar</li>
+<li>Outdoor deck</li>
+<li>Unique tour, Bus or Ferry ticket assistance</li>
+<li>Laundry facilities</li>
+<li>Two-month free luggage storage</li>
+<li>Swimming pool</li>
+<li>Skype phone</li>
+<li>Grab & go</li>
+<li>Free towels</li>
+<li>Ladies dorms</li>
+<li>Theater room</li>
+<li>Cool down room</li>
+<li>Each floor of Lub d is equipped with smoke detectors, fire alarms, and fire extinguishers to prevent and respond to emergencies.</li>
+<li>Pets are not allowed.</li>
+<li>There is no capacity for extra beds in the room.</li>
+<li>Language Spoken: Thai and English</li>
+<li><span style="color:#FF7417">Check-in Time</span>: from 2 pm</li>
+<li><span style="color:#FF7417">Check-out Time</span>: until 12 pm</li>
+<li>Minimum check-in age is 18.</li>
+<li>Payment: Cash or credit card (Visa, Master, UnionPay, and JCB) is welcomed upon arrival.</li>
+</ul>
+</div>
+
+<div id="reviews"></div>
+<br>
+
+<br>
+
+<!-- Reviews -->
+
+<div class="namebox">
+<h2 style="color:white;text-align:center;padding-top:20px">Our Guest Reviews</h2>
+<p style="color:white;text-align:center">Come Experience the Culture, Art & Nightlife that make Lub d hostel the best party hostel – a Traveler’s Paradise.</p>
+</div>
+
+<br><br>
+<p style="text-align:center;"><b>Hostels in Bangkok, Phuket, Siem Reap and Makati, </b>consisting of the 10,000+ most recent customer reviews.</p>
+
+<div id="cardblock">
+<div class="card col">
+    <div class="card-body">
+      <h4 class="card-title" style="color:#FE6C61">Lub d Koh Samui Chaweng Beach</h4>
+      <p class="card-text">Beachfront social sweet spot on Thailand's beautiful Koh Samui.</p>
+      <span style="color:#C4C4C4">Check it Out!</span><a href="#" class="card-link">Samui hostel</a><br><br>
+     <button class="bttn btn-block">GUEST REVIEW</button>
+    </div>
+  </div>
+
+
+
+<div class="card col">
+    <div class="card-body">
+      <h4 class="card-title" style="color:#FE6C61">Lub d Koh Samui Chaweng Beach</h4>
+      <p class="card-text">Beachfront social sweet spot on Thailand's beautiful Koh Samui.</p>
+      <span style="color:#C4C4C4">Check it Out!</span><a href="#" class="card-link">Samui hostel</a><br><br>
+     <button class="bttn btn-block">GUEST REVIEW</button>
+    </div>
+  </div>
+<div class="card col">
+    <div class="card-body">
+      <h4 class="card-title" style="color:#FE6C61">Lub d Koh Samui Chaweng Beach</h4>
+      <p class="card-text">Beachfront social sweet spot on Thailand's beautiful Koh Samui.</p>
+      <span style="color:#C4C4C4">Check it Out!</span><a href="#" class="card-link">Samui hostel</a><br><br>
+    <button class="bttn btn-block">GUEST REVIEW</button>
+    </div>
+  </div>
+ </div>
+<div id="cardblock" style="max-width:33%;">
+<div class="card col" >
+    <div class="card-body">
+      <h4 class="card-title" style="color:#FE6C61">Lub d Koh Samui Chaweng Beach</h4>
+      <p class="card-text">Beachfront social sweet spot on Thailand's beautiful Koh Samui.</p>
+      <span style="color:#C4C4C4">Check it Out!</span><a href="#" class="card-link">Samui hostel</a><br><br>
+     <button class="bttn btn-block">GUEST REVIEW</button>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+
+<div class="linkcontainer">
+<h4><span style="border-bottom:1px solid #618EB4">CONTACT</span></h4>
+<ul style="list-style-type:none">
+<li><a href="#" class="extralinks">Booking & Sales</a></li>
+<li><a href="#" class="extralinks">Groups Inquiries</a></li>
+<li><a href="#" class="extralinks">FAQ</a></li>
+<li><a href="#" class="extralinks">About Lub d</a></li>
+<li><a href="#" class="extralinks">Privacy Policy</a></li>
+</ul>
+
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('.ct-slick-homepage').on('init', function(event, slick){
+    $('.animated').addClass('activate fadeInUp');
+  });   
+
+  $('.ct-slick-homepage').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+  });     
+
+  $('.ct-slick-homepage').on('afterChange', function(event, slick, currentSlide) {
+    $('.animated').removeClass('off');
+    $('.animated').addClass('activate fadeInUp');
+  });   
+
+  $('.ct-slick-homepage').on('beforeChange', function(event, slick, currentSlide) {
+    $('.animated').removeClass('activate fadeInUp');
+    $('.animated').addClass('off');
+  });
+});
+
+$(document).ready(function() {
+  if ($('[data-background]').length > 0) {
+    $('[data-background]').each(function() {
+      var $background, $backgroundmobile, $this;
+      $this = $(this);
+      $background = $(this).attr('data-background');
+      $backgroundmobile = $(this).attr('data-background-mobile');
+      if ($this.attr('data-background').substr(0, 1) === '#') {
+        return $this.css('background-color', $background);
+      } else if ($this.attr('data-background-mobile') && device.mobile()) {
+        return $this.css('background-image', 'url(' + $backgroundmobile + ')');
+      } else {
+        return $this.css('background-image', 'url(' + $background + ')');
+      }
+    });
+  }
+});
+
+// Add smooth scrolling to all links
+
+$(document).ready(function(){
+  
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+// Get current date
+
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day;
+
+
+document.getElementById('checkin').value = today;
+document.getElementById('checkout').value = today;
+</script>
+
+</body>
+</html>
